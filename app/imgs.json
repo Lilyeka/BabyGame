@@ -1,0 +1,86 @@
+[
+    {
+        "id": 1,
+        "text": "Где веселая девочка?",
+        "img1": {
+            "url": "img/1_1.jpg",
+            "answer": 1
+        },
+        "img2": {
+            "url": "img/1_2.jpg",
+            "answer": 0
+        }
+    },
+    {
+       "id": 2,
+        "text": "Где грязный мальчик?",
+        "img1": {
+            "url": "img/2_1.jpg",
+            "answer": 1
+        },
+        "img2": {
+            "url": "img/2_2.jpg",
+            "answer": 0
+        }
+    },
+    {
+       "id": 3,
+        "text": "Где маленькая рыбка?",
+        "img1": {
+            "url": "img/3_1.jpg",
+            "answer": 0
+        },
+        "img2": {
+            "url": "img/3_2.jpg",
+            "answer": 1
+        }
+    },
+    {
+       "id": 4,
+        "text": "Где мокрый мальчик?",
+        "img1": {
+            "url": "img/4_1.jpg",
+            "answer": 1
+        },
+        "img2": {
+            "url": "img/4_2.jpg",
+            "answer": 0
+        }
+    },
+    {
+       "id": 5,
+        "text": "Что на картинке мягкое?",
+        "img1": {
+            "url": "img/5_1.jpg",
+            "answer": 0
+        },
+        "img2": {
+            "url": "img/5_2.jpg",
+            "answer": 1
+        }
+    },
+    {
+       "id": 6,
+        "text": "Где горячий предмет?",
+        "img1": {
+            "url": "img/6_1.jpg",
+            "answer": 0
+        },
+        "img2": {
+            "url": "img/6_2.jpg",
+            "answer": 1
+        }
+    },
+    {
+       "id": 7,
+        "text": "Где ночь?",
+        "img1": {
+            "url": "img/7_1.jpg",
+            "answer": 1
+        },
+        "img2": {
+            "url": "img/7_2.jpg",
+            "answer": 0
+        }
+    }
+]
