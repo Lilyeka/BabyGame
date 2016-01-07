@@ -1,15 +1,16 @@
 
 
 
-<div ng-repeat="(g, question) in questions" ng-if="i == g" ng-animate="{enter: 'view-slide-in'}">
-    
+<!--div ng-repeat="(g, question) in questions" ng-if="i == g" ng-animate="{enter: 'view-slide-in'}"-->
 
+    
+<div>
 <table>
-    <tr><td>{{question.text}}</td>
+    <tr><td>{{questions[i].text}}</td>
         <td></td>
     </tr>
-    <tr><td><img ng-src = "{{question.img1.url}}" ng-click = "setAnswer(question.img1.answer,questions)"></td>
-        <td><img ng-src = "{{question.img2.url}}" ng-click = "setAnswer(question.img2.answer,questions)"></td>
+    <tr><td><img ng-src = "{{questions[i].img1.url}}" ng-click = "setAnswer(questions[i].img1.answer,questions)"></td>
+        <td><img ng-src = "{{questions[i].img2.url}}" ng-click = "setAnswer(questions[i].img2.answer,questions)"></td>
     </tr>
 </table>
 
