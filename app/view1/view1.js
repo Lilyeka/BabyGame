@@ -42,7 +42,7 @@ angular.module('myApp.view1', ['ngRoute','ngAnimate'])
 
 .animation('.hide-animation', function () {
   return {
-    beforeAddClass : function(element, className, done) {
+    add : function(element, className, done) {
       if (className === 'ng-hide') {
         element.animate({
           opacity: 0
@@ -51,7 +51,7 @@ angular.module('myApp.view1', ['ngRoute','ngAnimate'])
         done();
       }
     },
-    removeClass : function(element, className, done) {
+    remove : function(element, className, done) {
       if (className === 'ng-hide') {
       element.css('opacity',0);
       element.animate({
