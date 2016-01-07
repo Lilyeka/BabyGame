@@ -38,4 +38,43 @@ angular.module('myApp.view1', ['ngRoute'])
 	 }
 	}; 
 
+})
+
+.animation('.repeat-animation', function () {
+  return {
+    enter : function(element, done) {
+      console.log("entering...");
+      var width = element.width();
+      element.css({
+        position: 'relative',
+        left: -10,
+        opacity: 0
+      });
+      element.animate({
+        left: 0,
+        opacity: 1
+      }, done);
+    },
+    leave : function(element, done) {
+      element.css({
+        position: 'relative',
+        left: 0,
+        opacity: 1
+      });
+      element.animate({
+        left: -10,
+        opacity: 0
+      }, done);
+    },
+    move : function(element, done) {
+      element.css({
+        left: "2px",
+        opacity: 0.5
+      });
+      element.animate({
+        left: "0px",
+        opacity: 1
+      }, done);
+    }
+  };
 });
