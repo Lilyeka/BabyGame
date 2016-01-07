@@ -20,7 +20,8 @@ angular.module('myApp.view1', ['ngRoute'])
 
 .controller('View1Ctrl', function($scope, $http, $location) {
  $http.get('imgs.json').success(function(data){
-	$scope.questions = randomize(data);  
+	$scope.questions = randomize(data);
+	alert('Привет, букет!');
  });   
  $scope.i = 0;
  $scope.randomInt = 0;
