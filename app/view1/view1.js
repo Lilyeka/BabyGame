@@ -40,26 +40,23 @@ angular.module('myApp.view1', ['ngRoute','ngAnimate'])
 
 })
 
-.animation('.hide-animation', function () {
-  return {
-    add : function(element, className, done) {
-      if (className === 'ng-hide') {
-        element.animate({
-          opacity: 0
-        },500, done);
-      } else {
-        done();
-      }
-    },
-    remove : function(element, className, done) {
-      if (className === 'ng-hide') {
-      element.css('opacity',0);
-      element.animate({
-          opacity: 1
-        }, 500, done);
-      } else {
-        done();
-      }
-    }
+.animation('.view-slide-in', function(){
+return{
+	enter: function(element, done){
+		element.css({
+			opacity:0.5,
+			position:"relative",
+			top:"10px",
+			left:"20px"
+			
+		})
+    		.animate({
+    			top:0,
+			left:0,
+			opacity: 1},
+		1000,done);
+		
+	}
   };
 });
+
