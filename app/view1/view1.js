@@ -1,9 +1,9 @@
 'use strict';
-
+//вернет целое случайное число в пределах мин и макс
 function getRandomInt(min, max) 
 { return Math.floor(Math.random() * (max - min + 1)) + min; 
 }
-
+//рандомизируем элементы в массиве
 function randomize(data)
 {
 var qwests = [];
@@ -16,6 +16,7 @@ while(data.length > 0){
 }
 return qwests;
 }
+
 angular.module('myApp.view1', ['ngRoute'])
 
 .controller('View1Ctrl', function($scope, $http, $location) {
@@ -24,10 +25,7 @@ angular.module('myApp.view1', ['ngRoute'])
 	alert('Привет, букет!');
  });   
  $scope.i = 0;
- $scope.randomInt = 0;
- $scope.setRandomInt = function(min,max){
- 	$scope.randomInt = Math.floor(Math.random() * (max - min + 1)) + min;	
- }
+ 
  $scope.setAnswer = function(answ,quests){
 		$scope.mainAnswer = answ;
 		if($scope.i + 1 <quests.length){
