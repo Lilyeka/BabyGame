@@ -2,7 +2,7 @@
     {
         "id": 1,
         "text": "Где веселая девочка?",
-        "fade": true,
+        "fade": false,
         "img1": {
             "url": "img/1_1.jpg",
             "answer": 1
