@@ -38,7 +38,7 @@ angular.module('myApp.view1', ['ngRoute'])
 	 }
 	}; 
 
-})
+});
 
 /*.animation('highlight-enter',function(){
 return{
@@ -57,9 +57,8 @@ return{
 
 }
 
-});*/
-
-.animation('highlight-enter', function(){
+});
+ .animation('highlight-enter', function(){
 return{
 	enter: function(element, done){
 		element.css({
@@ -78,4 +77,4 @@ return{
 	}
   };
 });
-
+*/
