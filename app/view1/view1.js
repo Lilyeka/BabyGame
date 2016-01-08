@@ -40,7 +40,7 @@ angular.module('myApp.view1', ['ngRoute','ngAnimate'])
 
 })
 
-.animation('highlight-enter',function(){
+/*.animation('highlight-enter',function(){
 return{
 	setup: function(element){
 		element.css({
@@ -57,26 +57,26 @@ return{
 
 }
 
-});
+});*/
 
-//.animation('.view-slide-in', function(){
-//return{
-//	enter: function(element, done){
-//		element.css({
-//			opacity:0.5,
-//			position:"relative",
-//			top:"10px",
-//			left:"20px"
-//			
-//		})
-  //  		.animate({
-    //			top:0,
-//			left:0,
-//			opacity: 1},
-//		1000,done);
-//		
-//	}
-//  };
-//})
-//;
+.animation('highlight-enter', function(){
+return{
+	enter: function(element, done){
+		element.css({
+			opacity:0.5,
+			position:"relative",
+			top:"10px",
+			left:"20px"
+			
+		})
+    		.animate({
+    			top:0,
+			left:0,
+			opacity: 1},
+		1000,done);
+		
+	}
+  };
+})
+;
 
