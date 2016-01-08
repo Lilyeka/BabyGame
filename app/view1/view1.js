@@ -17,7 +17,7 @@ while(data.length > 0){
 return qwests;
 }
 
-angular.module('myApp.view1', ['ngRoute','ngAnimate'])
+angular.module('myApp.view1', ['ngRoute'])
 
 .controller('View1Ctrl', function($scope, $http, $location) {
  $http.get('imgs.json').success(function(data){
@@ -77,6 +77,5 @@ return{
 		
 	}
   };
-})
-;
+});
 
