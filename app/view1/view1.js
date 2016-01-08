@@ -22,9 +22,11 @@ angular.module('myApp.view1', ['ngRoute'])
 .controller('View1Ctrl', function($scope, $http, $location,$timeout) {
  $http.get('imgs.json').success(function(data){
 	$scope.questions = randomize(data);
+	$scope.questions[0].fade = true;
 	alert('Привет, букет!');
  });   
  $scope.i = 0;
+ 
  
  $scope.setAnswer = function(answ,quests){
 		$scope.mainAnswer = answ;
