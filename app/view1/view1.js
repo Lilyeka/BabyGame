@@ -44,12 +44,12 @@ angular.module('myApp.view1', ['ngRoute','ngAnimate'])
 return{
 	setup: function(element){
 		element.css({
-			'opacity': '0.1'
+			opacity: 0.1
 		});
 	},
 	start: function(element,done){
 		element.animate({
-			'opacity': '1'
+			opacity: 1
 		},1000, function(){
 			done();
 		})
@@ -57,7 +57,7 @@ return{
 
 }
 
-})
+});
 
 //.animation('.view-slide-in', function(){
 //return{
@@ -78,5 +78,5 @@ return{
 //	}
 //  };
 //})
-;
+//;
 
