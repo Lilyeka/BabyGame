@@ -19,7 +19,7 @@ return qwests;
 
 angular.module('myApp.view1', ['ngRoute'])
 
-.controller('View1Ctrl', function($scope, $http, $location) {
+.controller('View1Ctrl', function($scope, $http, $location,$timeout) {
  $http.get('imgs.json').success(function(data){
 	$scope.questions = randomize(data);
 	alert('Привет, букет!');
@@ -29,7 +29,12 @@ angular.module('myApp.view1', ['ngRoute'])
  $scope.setAnswer = function(answ,quests){
 		$scope.mainAnswer = answ;
 		if($scope.i + 1 <quests.length){
-				$scope.i = $scope.i + answ;
+			$scope.i = $scope.i + answ;
+			if($scope.mainAnswer > 0) {
+				$timeout(function() {
+					quests[$scope.i].fade = true;	
+          				}, 100);
+				}
 			}
 		else{ 
 			if (answ == 1) {
