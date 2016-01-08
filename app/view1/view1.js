@@ -40,6 +40,25 @@ angular.module('myApp.view1', ['ngRoute','ngAnimate'])
 
 })
 
+.animation('highlight-enter',function(){
+return{
+	setup: function(element){
+		element.css({
+			'opacity': '0.1'
+		});
+	},
+	start: function(element,done){
+		element.animate({
+			'opacity': '1'
+		},1000, function(){
+			done();
+		})
+	}
+
+}
+
+})
+
 //.animation('.view-slide-in', function(){
 //return{
 //	enter: function(element, done){
