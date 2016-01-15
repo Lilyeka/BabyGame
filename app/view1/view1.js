@@ -20,12 +20,12 @@ return qwests;
 angular.module('myApp.view1', ['ngRoute'])
 
 .controller('View1Ctrl', function($scope, $http, $location,$timeout) {
-$scope.s = $location.search();
+var s = $location.search();
 var nameFile ='';
-if ($scope.s.v ="ver1"){
+if (s.v ="ver1"){
 	nameFile = 'imgs.json';
 	}
-else {if ($scope.s.v ="ver2"){
+else {if (s.v ="ver2"){
 	nameFile = 'imgsAll.json';
 	}
 }
