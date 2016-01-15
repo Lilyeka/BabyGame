@@ -24,9 +24,11 @@ $scope.s = $location.search();
 var nameFile ='';
 if ($scope.s.v ="ver1"){
 	nameFile = 'imgs.json';
-	alert('Привет букет!');
 	}
-	
+else {if ($scope.s.v ="ver2"){
+	nameFile = 'imgsAll.json';
+	}
+}
 	// a simple filter object, with default filter values
         /*$scope.filters = { v: '', title: '' };
  
