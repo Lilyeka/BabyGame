@@ -5,9 +5,11 @@
     
 
 <table align="center">
-    <tr><td><h2 font-size ="200%">{{quest.text}}</h2></td>
-        <td>""</td>
+    <tr><td><h2 font-size ="200%" align="center">{{quest.text}}</h2></td>
+        <!--td>&nbsp;</td-->
     </tr>
+</table align="center">
+   <table>
     <tr><td><h1 ng-class="{f: quest.fade}"><img  ng-src = "{{quest.img1.url}}" ng-click = "setAnswer(quest.img1.answer,questions)"></h1></td>
         <td><h1 ng-class="{f: quest.fade}"><img  ng-src = "{{quest.img2.url}}" ng-click = "setAnswer(quest.img2.answer,questions)"></h1></td>
     </tr>
