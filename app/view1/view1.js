@@ -22,10 +22,10 @@ angular.module('myApp.view1', ['ngRoute'])
 .controller('View1Ctrl', function($scope, $http, $location,$timeout) {
 var s = $location.search();
 var nameFile ='';
-if (s.v ="ver1"){
+if (s.v == "ver1"){
 	nameFile = 'imgs.json';
 	}
-else {if (s.v ="ver2"){
+else {if (s.v == "ver2"){
 	nameFile = 'imgsAll.json';
 	}
 }
