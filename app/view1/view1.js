@@ -24,7 +24,9 @@ angular.module('myApp.view1', ['ngRoute'])
 	$scope.questions = randomize(data);
 	$scope.questions[0].fade = true;
 	var s = $location.search();
-	alert('Привет, букет!' + s);
+	for (fld in s){
+	alert('Привет, букет!' + s[fld]);
+	}
  });   
  $scope.i = 0;
  
