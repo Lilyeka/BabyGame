@@ -22,8 +22,10 @@ angular.module('myApp.view1', ['ngRoute'])
 .controller('View1Ctrl', function($scope, $http, $location,$timeout) {
 $scope.s = $location.search();
 var nameFile ='';
-if ($scope.s.v ="ver1")
-{alert('Привет букет!');}
+if ($scope.s.v ="ver1"){
+	nameFile = 'imgs.json';
+	alert('Привет букет!');
+	}
 	
 	// a simple filter object, with default filter values
         /*$scope.filters = { v: '', title: '' };
@@ -36,7 +38,7 @@ if ($scope.s.v ="ver1")
                 $scope.filters[fld] = $scope.s[fld];
             }
         }*/	
- $http.get('imgs.json').success(function(data){
+ $http.get(nameFile).success(function(data){
 	$scope.questions = randomize(data);
 	$scope.questions[0].fade = true;
 	
