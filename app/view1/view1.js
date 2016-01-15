@@ -24,10 +24,10 @@ angular.module('myApp.view1', ['ngRoute'])
 	$scope.questions = randomize(data);
 	$scope.questions[0].fade = true;
 	$scope.s = $location.search();
-	var v1 = "ver1";
-	var v2 = "ver2";
+	var v1 = {v:'ver1'};
+	var v2 = 'ver2';
 	if (v1 in $scope.s){
-	alert('Привет, букет!' + v1);
+	alert('Привет, букет!');
 	}
  });   
  $scope.i = 0;
