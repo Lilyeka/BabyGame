@@ -24,11 +24,23 @@ angular.module('myApp.view1', ['ngRoute'])
 	$scope.questions = randomize(data);
 	$scope.questions[0].fade = true;
 	$scope.s = $location.search();
-	var v1 = {v:"ver1"};
+	
+	    // a simple filter object, with default filter values
+        $scope.filters = { v: '', title: '' };
+ 
+        // read filters from the query string, and use them to
+        // replace the default filters
+        
+        for (var fld in $scope.filters) {
+            if (fld in $scope.s) {
+                $scope.filters[fld] = $scope.s[fld];
+            }
+        }
+	/*var v1 = {v:"ver1"};
 	var v2 = 'ver2';
 	if (v1 in $location.search()){
 	alert('Привет, букет!');
-	}
+	}*/
  });   
  $scope.i = 0;
  
