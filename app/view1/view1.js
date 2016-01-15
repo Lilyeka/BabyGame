@@ -23,7 +23,8 @@ angular.module('myApp.view1', ['ngRoute'])
  $http.get('imgs.json').success(function(data){
 	$scope.questions = randomize(data);
 	$scope.questions[0].fade = true;
-	alert('Привет, букет!');
+	var s = $location.search();
+	alert('Привет, букет!' + s[0]);
  });   
  $scope.i = 0;
  
