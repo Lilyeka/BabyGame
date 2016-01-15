@@ -20,13 +20,13 @@ return qwests;
 angular.module('myApp.view1', ['ngRoute'])
 
 .controller('View1Ctrl', function($scope, $http, $location,$timeout) {
- $http.get('imgs.json').success(function(data){
-	$scope.questions = randomize(data);
-	$scope.questions[0].fade = true;
-	$scope.s = $location.search();
+$scope.s = $location.search();
+var nameFile ='';
+if ($scope.s.v ="ver1")
+{alert('Привет букет!');}
 	
-	    // a simple filter object, with default filter values
-        $scope.filters = { v: '', title: '' };
+	// a simple filter object, with default filter values
+        /*$scope.filters = { v: '', title: '' };
  
         // read filters from the query string, and use them to
         // replace the default filters
@@ -35,12 +35,12 @@ angular.module('myApp.view1', ['ngRoute'])
             if (fld in $scope.s) {
                 $scope.filters[fld] = $scope.s[fld];
             }
-        }
-	/*var v1 = {v:"ver1"};
-	var v2 = 'ver2';
-	if (v1 in $location.search()){
-	alert('Привет, букет!');
-	}*/
+        }*/	
+ $http.get('imgs.json').success(function(data){
+	$scope.questions = randomize(data);
+	$scope.questions[0].fade = true;
+	
+	
  });   
  $scope.i = 0;
  
