@@ -1,1 +1,263 @@
-sdsd
+[
+    {
+        "id": 1,
+        "text": "Где веселая девочка?",
+        "fade": false,
+        "img1": {
+            "url": "img/1_1.jpg",
+            "answer": 1
+        },
+        "img2": {
+            "url": "img/1_2.jpg",
+            "answer": 0
+        }
+    },
+    {
+       "id": 2,
+        "text": "Где грязный мальчик?",
+        "fade": false,
+        "img1": {
+            "url": "img/2_1.jpg",
+            "answer": 1
+        },
+        "img2": {
+            "url": "img/2_2.jpg",
+            "answer": 0
+        }
+    },
+    {
+       "id": 3,
+        "text": "Где маленькая рыбка?",
+        "fade": false,
+        "img1": {
+            "url": "img/3_1.jpg",
+            "answer": 0
+        },
+        "img2": {
+            "url": "img/3_2.jpg",
+            "answer": 1
+        }
+    },
+    {
+       "id": 4,
+        "text": "Где мокрый мальчик?",
+        "fade": false,
+        "img1": {
+            "url": "img/4_1.jpg",
+            "answer": 1
+        },
+        "img2": {
+            "url": "img/4_2.jpg",
+            "answer": 0
+        }
+    },
+    {
+       "id": 5,
+        "text": "Что на картинке мягкое?",
+        "fade": false,
+        "img1": {
+            "url": "img/5_1.jpg",
+            "answer": 0
+        },
+        "img2": {
+            "url": "img/5_2.jpg",
+            "answer": 1
+        }
+    },
+    {
+       "id": 6,
+        "text": "Где горячий предмет?",
+        "fade": false,
+        "img1": {
+            "url": "img/6_1.jpg",
+            "answer": 0
+        },
+        "img2": {
+            "url": "img/6_2.jpg",
+            "answer": 1
+        }
+    },
+    {
+       "id": 7,
+        "text": "Где ночь?",
+        "fade": false,
+        "img1": {
+            "url": "img/7_1.jpg",
+            "answer": 1
+        },
+        "img2": {
+            "url": "img/7_2.jpg",
+            "answer": 0
+        }
+    },
+    {
+       "id": 8,
+        "text": "Где пустая тарелка?",
+        "fade": false,
+        "img1": {
+            "url": "img/9_1.jpg",
+            "answer": 1
+        },
+        "img2": {
+            "url": "img/9_2.jpg",
+            "answer": 0
+        }
+    },
+    {
+       "id": 9,
+        "text": "На какой картинке девочке жарко?",
+        "fade": false,
+        "img1": {
+            "url": "img/10_1.jpg",
+            "answer": 0
+        },
+        "img2": {
+            "url": "img/10_2.jpg",
+            "answer": 1
+        }
+    },
+    {
+       "id": 10,
+        "text": "Где лёгкий предмет?",
+        "fade": false,
+        "img1": {
+            "url": "img/11_1.jpg",
+            "answer": 1
+        },
+        "img2": {
+            "url": "img/11_2.jpg",
+            "answer": 0
+        }
+    },
+ {
+       "id": 11,
+        "text": "На какой картинке окно открытое?",
+        "fade": false,
+        "img1": {
+            "url": "img/12_1.jpg",
+            "answer": 0
+        },
+        "img2": {
+            "url": "img/12_2.jpg",
+            "answer": 1
+        }
+    },
+    {
+       "id": 12,
+        "text": "Кто сверху?",
+        "fade": false,
+        "img1": {
+            "url": "img/13_1.jpg",
+            "answer": 1
+        },
+        "img2": {
+            "url": "img/13_2.jpg",
+            "answer": 0
+        }
+    },
+    {
+       "id": 13,
+        "text": "Кто сидит под стулом?",
+        "fade": false,
+        "img1": {
+            "url": "img/14_1.jpg",
+            "answer": 1
+        },
+        "img2": {
+            "url": "img/14_2.jpg",
+            "answer": 0
+        }
+    },
+    {
+       "id": 14,
+        "text": "На какой картинке мальчик за кубиком?",
+        "fade": false,
+        "img1": {
+            "url": "img/15_1.jpg",
+            "answer": 0
+        },
+        "img2": {
+            "url": "img/15_2.jpg",
+            "answer": 1
+        }
+    },
+    {
+       "id": 15,
+        "text": "Где фонарь выключен?",
+        "fade": false,
+        "img1": {
+            "url": "img/16_1.jpg",
+            "answer": 0
+        },
+        "img2": {
+            "url": "img/16_2.jpg",
+            "answer": 1
+        }
+    },
+    {
+       "id": 16,
+        "text": "Кто молодой?",
+        "fade": false,
+        "img1": {
+            "url": "img/17_1.jpg",
+            "answer": 1
+        },
+        "img2": {
+            "url": "img/17_2.jpg",
+            "answer": 0
+        }
+    },
+    {
+       "id": 17,
+        "text": "Кто быстрый - черепаха или зайчик?",
+        "fade": false,
+        "img1": {
+            "url": "img/18_1.jpg",
+            "answer": 0
+        },
+        "img2": {
+            "url": "img/18_2.jpg",
+            "answer": 1
+        }
+    },
+    {
+       "id": 18,
+        "text": "Какой из мальчиков низкий?",
+        "fade": false,
+        "img1": {
+            "url": "img/19_1.jpg",
+            "answer": 1
+        },
+        "img2": {
+            "url": "img/19_2.jpg",
+            "answer": 0
+        }
+    },
+    {
+       "id": 19,
+        "text": "На какой картинке собачка внутри будки?",
+        "fade": false,
+        "img1": {
+            "url": "img/21_1.jpg",
+            "answer": 1
+        },
+        "img2": {
+            "url": "img/22_2.jpg",
+            "answer": 0
+        }
+    },
+    {
+       "id": 20,
+        "text": "Кто находится далеко от нас?",
+        "fade": false,
+        "img1": {
+            "url": "img/22_1.jpg",
+            "answer": 0
+        },
+        "img2": {
+            "url": "img/22_2.jpg",
+            "answer": 1
+        }
+    }
+]
+
