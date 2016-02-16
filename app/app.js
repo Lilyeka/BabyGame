@@ -12,15 +12,15 @@ angular.module('myApp', [
 config(['$routeProvider', function($routeProvider) {
   
   $routeProvider
-  .when('/welcome', {
+      .when('/welcome', {
     templateUrl: 'welcome/welcome.html',
     controller: 'WelcomeCtrl'
   })
-  .when('/view1', {
+      .when('/view1', {
     templateUrl: 'view1/view1.html',
     controller: 'View1Ctrl'
   })
-  .when('/view2', {
+      .when('/view2', {
     templateUrl: 'view2/view2.html',
     controller: 'View2Ctrl'
   })
@@ -28,6 +28,6 @@ config(['$routeProvider', function($routeProvider) {
         templateUrl: 'puzzle/puzzle.html',
         controller: 'PuzzleCtrl'
       })
-  .otherwise({redirectTo: '/welcome'});
+      .otherwise({redirectTo: '/welcome'});
 
 }]);
