@@ -23,6 +23,10 @@ config(['$routeProvider', function($routeProvider) {
     templateUrl: 'view2/view2.html',
     controller: 'View2Ctrl'
   })
+      .when('/puzzle', {
+        templateUrl: 'puzzle/puzzle.html',
+        controller: 'PuzzleCtrl'
+      })
   .otherwise({redirectTo: '/welcome'});
 
 }]);
