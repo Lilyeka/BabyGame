@@ -33,7 +33,15 @@ angular.module('myApp.puzzle', ['ngRoute'])
 	}, {
 		"name": "Broccoli"
 	}];
-	$scope.veggies = vegetables;
+	var vegetables1 = [{
+		name:''
+	}];
+
+	for (var i = 0; i < gridSize * gridSize; i++) {
+		vegetables1[i].name = "Potato"
+	}
+	$scope.veggies = vegetables1;
+
 
 	$scope.setImage = function(gridSize) {
 		window.alert("Hellow!!!");
