@@ -1,0 +1,22 @@
+
+
+<div ng-repeat="(g, quest) in questions" ng-show ="g == i">
+
+    
+
+<table align="center">
+    <tr><td><h2 font-size ="200%" align="center">{{quest.text}}</h2></td>
+        <!--td>&nbsp;</td-->
+    </tr>
+</table>
+   <table align="center">
+    <tr><td><h1 ng-class="{f: quest.fade}"><img  ng-src = "{{quest.img1.url}}" ng-click = "setAnswer(quest.img1.answer,questions)"></h1></td>
+        <td><h1 ng-class="{f: quest.fade}"><img  ng-src = "{{quest.img2.url}}" ng-click = "setAnswer(quest.img2.answer,questions)"></h1></td>
+    </tr>
+</table>
+
+<!--div>{{mainAnswer}}</div-->
+<!--div>{{questions.length}}</div-->
+
+</div>
+
