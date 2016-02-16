@@ -34,7 +34,7 @@ angular.module('myApp.puzzle', ['ngRoute'])
 		"name": "Broccoli"
 	}];
 	var vegetables1 = [{
-		name:''
+		"name":''
 	}];
 
 	for (var i = 0; i < 9; i++) {
