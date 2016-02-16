@@ -37,7 +37,7 @@ angular.module('myApp.puzzle', ['ngRoute'])
 		name:''
 	}];
 
-	for (var i = 0; i < gridSize * gridSize; i++) {
+	for (var i = 0; i < 9; i++) {
 		vegetables1[i].name = "Potat0o";
 	}
 	$scope.veggies = vegetables1;
