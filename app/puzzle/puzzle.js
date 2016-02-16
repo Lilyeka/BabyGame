@@ -26,7 +26,7 @@ angular.module('myApp.puzzle', ['ngRoute'])
 	$scope.puzzleimg = 'img/12.jpg';
 
 	$scope.setAnswer = function() {
-		ALERT("Hellow!!!");
+		window.alert("Hellow!!!");
 	};
  /*$http.get(nameFile).success(function(data){
 	$scope.questions = randomize(data);
