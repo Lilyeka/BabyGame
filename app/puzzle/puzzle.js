@@ -24,9 +24,39 @@ angular.module('myApp.puzzle', ['ngRoute'])
 
 
 	$scope.puzzleimg = 'img/12.jpg';
+	$scope.xpositions =[];
+	$scope.ypositions =[];
+	var vegetables = [{
+		"name": "Carrot"
+	}, {
+		"name": "Potato"
+	}, {
+		"name": "Broccoli"
+	}];
+	$scope.veggies = vegetables;
 
-	$scope.setAnswer = function() {
+	$scope.setImage = function(gridSize) {
 		window.alert("Hellow!!!");
+
+
+		//Var percentage = 100 / (gridSize - 1);
+		//var image = puzzleimg;//images[Math.floor(Math.random() * images.length)];
+        //
+		//for (var i = 0; i < gridSize * gridSize; i++) {
+		//	$scope.xpositions[i] = (percentage * (i % gridSize));
+		//	$scope.ypositions[i] = (percentage * Math.floor(i / gridSize));
+        //
+		//	var li = $('<li class="item" data-value="' + (i) + '"></li>').css({
+		//		'background-image': 'url(' + image.src + ')',
+		//		'background-size': (gridSize * 100) + '%',
+		//		'background-position': xpos + ' ' + ypos,
+		//		'width': 400 / gridSize,
+		//		'height': 400 / gridSize
+		//	});
+		//	$('#sortable').append(li);
+		//}
+		//$('#sortable').randomize();
+
 	};
  /*$http.get(nameFile).success(function(data){
 	$scope.questions = randomize(data);

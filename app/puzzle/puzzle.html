@@ -1,9 +1,15 @@
 
 <table align="center">
-    <tr><td><img  ng-src = "{{puzzleimg}}" ng-click = "setAnswer()"></td>
-        <td><img  ng-src = "{{puzzleimg}}" ng-click = "setAnswer()"></td>
+    <tr><td><img  ng-src = "{{puzzleimg}}" ng-click = "setImage(3)"></td>
+        <td><img  ng-src = "{{puzzleimg}}" ng-click = "setImage(3)"></td>
     </tr>
 </table>
+
+<ul>
+    <li ng-repeat="veg in veggies">
+        {{veg.name}}
+    </li>
+</ul>
 
 <!--<div ng-repeat="(g, quest) in questions" ng-show ="g == i">
 
