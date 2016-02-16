@@ -17,30 +17,18 @@ while(data.length > 0){
 return qwests;
 }
 
-angular.module('myApp.view1', ['ngRoute'])
+angular.module('myApp.puzzle', ['ngRoute'])
 
-.controller('View1Ctrl', function($scope, $http, $location,$timeout) {
-var s = $location.search();
-var nameFile ='';
-if (s.v == "ver1"){
-	nameFile = 'imgs.json';
-	}
-else {if (s.v == "ver2"){
-	nameFile = 'imgsAll.json';
-	}
-}
-	// a simple filter object, with default filter values
-        /*$scope.filters = { v: '', title: '' };
- 
-        // read filters from the query string, and use them to
-        // replace the default filters
-        
-        for (var fld in $scope.filters) {
-            if (fld in $scope.s) {
-                $scope.filters[fld] = $scope.s[fld];
-            }
-        }*/	
- $http.get(nameFile).success(function(data){
+.controller('PuzzleCtrl', function($scope, $http, $location,$timeout) {
+
+
+
+	$scope.puzzleimg = 'img/12.jpg';
+
+	$scope.setAnswer = function() {
+		ALERT("Hellow!!!");
+	};
+ /*$http.get(nameFile).success(function(data){
 	$scope.questions = randomize(data);
 	$scope.questions[0].fade = true;
 	
@@ -65,47 +53,9 @@ else {if (s.v == "ver2"){
 		}
 	 }
 	}; 
-
-});
-
-/*.animation('highlight-enter',function(){
-return{
-	setup: function(element){
-		element.css({
-			opacity: 0.1
-		});
-	},
-	start: function(element,done){
-		element.animate({
-			opacity: 1
-		},1000, function(){
-			done();
-		})
-	}
-
-}
-
-});
- .animation('highlight-enter', function(){
-return{
-	enter: function(element, done){
-		element.css({
-			opacity:0.5,
-			position:"relative",
-			top:"10px",
-			left:"20px"
-			
-		})
-    		.animate({
-    			top:0,
-			left:0,
-			opacity: 1},
-		1000,done);
-		
-	}
-  };
-});
 */
+});
+
 
 
 

@@ -6,6 +6,7 @@ angular.module('myApp', [
   'myApp.welcome',
   'myApp.view1',
   'myApp.view2',
+  'myApp.puzzle',
   'myApp.version'
 ]).
 config(['$routeProvider', function($routeProvider) {
