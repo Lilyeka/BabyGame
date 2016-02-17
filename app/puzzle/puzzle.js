@@ -24,7 +24,7 @@ angular.module('myApp.puzzle', ['ngRoute'])
 
 
 	$scope.puzzleimg = 'img/12.jpg';
-	$scope.xpositions =[{name:''}];
+	 var xpositions =[{name:''}];
 	$scope.ypositions =[];
 	var vegetables = [{
 		"name": "Carrot"
@@ -34,7 +34,7 @@ angular.module('myApp.puzzle', ['ngRoute'])
 		"name": "Broccoli"
 	}];
 	for (var i = 0; i < 10; i++) {
-		 var xpositions[i].name = "olala";
+		 xpositions[i].name = "olala";
 	}
 
 	$scope.veggies = xpositions;
