@@ -17,7 +17,33 @@ while(data.length > 0){
 return qwests;
 }
 
+.directive("greet", function () {
+	return {
+		template: "<p>Привет, { { name } }</p>",
+		replace: true,
+		scope: {},
+
+		link: function (scope, element, attributes) {
+			scope.name = "Иван"
+		}
+	}
+})
+
+
 angular.module('myApp.puzzle', ['ngRoute'])
+
+	.directive("greet", function () {
+		return {
+			template: "<p>Привет, { { name } }</p>",
+			replace: true,
+			scope: {},
+
+			link: function (scope, element, attributes) {
+				scope.name = "Иван"
+			}
+		}
+	})
+
 
 .controller('PuzzleCtrl', function($scope, $http, $location,$timeout) {
 
