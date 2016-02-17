@@ -47,7 +47,7 @@ angular.module('myApp.puzzle', ['ngRoute'])
 	$scope.gridSize = 0;
 	//$scope.veggies = vegetables;
 	$scope.myStyle = {
-		"background": "red"
+		"background-color": "red"
 	}
 
 	$scope.setImage = function(gridSize) {
