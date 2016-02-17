@@ -33,7 +33,7 @@ angular.module('myApp.puzzle', ['ngRoute'])
 		"name": "Broccoli"
 	}];
 	for (var i = 0; i < 10; i++) {
-		var xpositions[i] = "olala";
+		xpositions[i] = "olala";
 	}
 
 	$scope.veggies = xpositions;
