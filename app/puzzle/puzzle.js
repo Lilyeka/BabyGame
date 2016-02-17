@@ -32,23 +32,7 @@ return qwests;
 
 angular.module('myApp.puzzle', ['ngRoute'])
 
-	.directive("greet", function () {
-		return {
-			template: "<p>Привет, { { name } }</p>",
-			replace: true,
-			scope: {},
-
-			link: function (scope, element, attributes) {
-				scope.name = "Иван"
-			}
-		}
-	})
-
-
 .controller('PuzzleCtrl', function($scope, $http, $location,$timeout) {
-
-
-
 	$scope.puzzleimg = 'img/12.jpg';
 
 	var vegetables = [{
@@ -62,7 +46,9 @@ angular.module('myApp.puzzle', ['ngRoute'])
 	$scope.veggies1 =[];
 	$scope.gridSize = 0;
 	//$scope.veggies = vegetables;
-
+	$scope.myStyle = {
+		"background": "red"
+	}
 
 	$scope.setImage = function(gridSize) {
 		window.alert("Hellow!!!");
