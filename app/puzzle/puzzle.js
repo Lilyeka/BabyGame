@@ -24,7 +24,7 @@ angular.module('myApp.puzzle', ['ngRoute'])
 
 
 	$scope.puzzleimg = 'img/12.jpg';
-	var xpositions = [];
+
 	var vegetables = [{
 		"name": "Carrot"
 	}, {
@@ -32,11 +32,9 @@ angular.module('myApp.puzzle', ['ngRoute'])
 	}, {
 		"name": "Broccoli"
 	}];
-	for (var i = 0; i < 10; i++) {
-		xpositions[i] = "olala";
-	}
 
-	$scope.veggies = xpositions;
+
+	$scope.veggies = vegetables;
 
 
 	$scope.setImage = function(gridSize) {
