@@ -34,13 +34,13 @@ angular.module('myApp.puzzle', ['ngRoute'])
 	}];
 
 	$scope.veggies1 =[];
-	$scope.i = 0;
+	$scope.gridSize = 0;
 	//$scope.veggies = vegetables;
 
 
 	$scope.setImage = function(gridSize) {
 		window.alert("Hellow!!!");
-
+		$scope.gridSize = gridSize;
 		for (var i = 0; i < 9; i++) {
 		//if ($scope.i<9){
 			$scope.veggies1.push($scope.veggies1.length);
