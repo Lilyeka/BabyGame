@@ -41,11 +41,11 @@ angular.module('myApp.puzzle', ['ngRoute'])
 	$scope.setImage = function(gridSize) {
 		window.alert("Hellow!!!");
 
-		//for (var i = 0; i < 9; i++) {
+		for (var i = 0; i < 9; i++) {
 		if ($scope.i<9){
 			$scope.veggies1.push($scope.veggies1.length);
 			$scope.i = $scope.i + 1;
-		}//}
+		}}
 			//	$scope.xpositions[i] =
 		//Var percentage = 100 / (gridSize - 1);
 		//var image = puzzleimg;//images[Math.floor(Math.random() * images.length)];
