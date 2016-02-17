@@ -17,35 +17,17 @@ while(data.length > 0){
 return qwests;
 }
 
-.directive("greet", function () {
-	return {
-		template: "<p>Привет, { { name } }</p>",
-		replace: true,
-		scope: {},
 
-		link: function (scope, element, attributes) {
-			scope.name = "Иван"
-		}
-	}
-})
 
 
 angular.module('myApp.puzzle', ['ngRoute'])
 
 .controller('PuzzleCtrl', function($scope, $http, $location,$timeout) {
 	$scope.puzzleimg = 'img/12.jpg';
-
-	var vegetables = [{
-		"name": "Carrot"
-	}, {
-		"name": "Potato"
-	}, {
-		"name": "Broccoli"
-	}];
-
 	$scope.veggies1 =[];
 	$scope.gridSize = 0;
-	//$scope.veggies = vegetables;
+
+
 	$scope.myStyle = {
 		"background-color": "red"
 	}
