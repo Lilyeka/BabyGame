@@ -32,13 +32,14 @@ angular.module('myApp.puzzle', ['ngRoute'])
 		//"background-color": "red",
 		"background-image": 'url(' + $scope.puzzleimg + ')',
 		//"background-size": $scope.gridSize*100 + '%',
-		"width": '100px',
-		"height": '100px'
+		"width": $scope.cellSize + 'px',//'100px',
+		"height": $scope.cellSize + 'px'//'100px'
 	}
 
 	$scope.setImage = function(gridSize) {
 		window.alert("Hellow!!!");
 		$scope.gridSize = gridSize;
+		$scope.cellSize = 400/gridSize;
 		for (var i = 0; i < 9; i++) {
 		//if ($scope.i<9){
 			$scope.veggies1.push($scope.veggies1.length);
