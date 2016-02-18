@@ -32,8 +32,8 @@ angular.module('myApp.puzzle', ['ngRoute'])
 		//"background-color": "red",
 		"background-image": 'url(' + $scope.puzzleimg + ')',
 		//"background-size": $scope.gridSize*100 + '%',
-		"width": $scope.cellSize + 'px',//'100px',
-		"height": $scope.cellSize + 'px'//'100px'
+		"width": string($scope.cellSize) + 'px',//'100px',
+		"height": string($scope.cellSize) + 'px'//'100px'
 	}
 
 	$scope.setImage = function(gridSize) {
