@@ -28,13 +28,7 @@ angular.module('myApp.puzzle', ['ngRoute'])
 	$scope.gridSize = 0;
 
 
-	$scope.myStyle = {
-		//"background-color": "red",
-		"background-image": 'url(' + $scope.puzzleimg + ')',
-		//"background-size": $scope.gridSize*100 + '%',
-		"width": string($scope.cellSize) + 'px',//'100px',
-		"height": string($scope.cellSize) + 'px'//'100px'
-	}
+
 
 	$scope.setImage = function(gridSize) {
 		window.alert("Hellow!!!");
@@ -45,6 +39,14 @@ angular.module('myApp.puzzle', ['ngRoute'])
 			$scope.veggies1.push($scope.veggies1.length);
 			$scope.i = $scope.i + 1;
 		//}
+		}
+
+		$scope.myStyle = {
+			//"background-color": "red",
+			"background-image": 'url(' + $scope.puzzleimg + ')',
+			//"background-size": $scope.gridSize*100 + '%',
+			"width": string($scope.cellSize) + 'px',//'100px',
+			"height": string($scope.cellSize) + 'px'//'100px'
 		}
 			//	$scope.xpositions[i] =
 		//Var percentage = 100 / (gridSize - 1);
