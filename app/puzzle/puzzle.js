@@ -22,12 +22,20 @@ return qwests;
 
 angular.module('myApp.puzzle', ['ngRoute'])
 
+.directive("otcDynamic", function(){
+	return {
+		template:"<button ng-click='doSomething()'>{{label}}</div>"
+	};
+});
 .controller('PuzzleCtrl', function($scope, $http, $location,$timeout) {
 	$scope.puzzleimg = 'img/12.jpg';
 	$scope.veggies1 =[];
 	$scope.gridSize = 0;
 
-
+	$scope.label = "Please click";
+	$scope.doSomething = function(){
+		$scope.message = "Clicked!";
+	};
 
 
 	$scope.setImage = function(gridSize) {
