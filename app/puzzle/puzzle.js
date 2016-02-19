@@ -43,10 +43,10 @@ angular.module('myApp.puzzle', ['ngRoute'])
 
 		$scope.myStyle = {
 			//"background-color": "red",
-			"background-image": 'url(' + $scope.puzzleimg + ')',
+			"background-image": 'url(' + $scope.puzzleimg + ')'
 			//"background-size": $scope.gridSize*100 + '%',
-			"width": string($scope.cellSize) + 'px',//'100px',
-			"height": string($scope.cellSize) + 'px'//'100px'
+			//"width": string($scope.cellSize) + 'px',//'100px',
+			//"height": string($scope.cellSize) + 'px'//'100px'
 		}
 			//	$scope.xpositions[i] =
 		//Var percentage = 100 / (gridSize - 1);
