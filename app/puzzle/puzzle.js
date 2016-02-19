@@ -22,10 +22,21 @@ return qwests;
 
 angular.module('myApp.puzzle', ['ngRoute'])
 
-.directive("otcDynamic", function(){
-	return {
-		template:"<button ng-click='doSomething()'>{{label}}</div>"
-	};
+//.directive("otcDynamic", function(){
+//	return {
+//		template:"<button ng-click='doSomething()'>{{label}}</div>"
+//	};
+//})
+
+.directive("otcDynamic", function($compile){
+	return{
+		link: function(scope, element){
+			var template = "<button ng-click='doSomething()'>{{label}}</button>";
+			var linkFn = $compile(template);
+			var content = linkFn(scope);
+			element.append(content);
+		}
+	}
 })
 .controller('PuzzleCtrl', function($scope, $http, $location,$timeout) {
 	$scope.puzzleimg = 'img/12.jpg';
