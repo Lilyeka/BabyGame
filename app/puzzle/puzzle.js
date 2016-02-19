@@ -26,7 +26,7 @@ angular.module('myApp.puzzle', ['ngRoute'])
 	return {
 		template:"<button ng-click='doSomething()'>{{label}}</div>"
 	};
-});
+})
 .controller('PuzzleCtrl', function($scope, $http, $location,$timeout) {
 	$scope.puzzleimg = 'img/12.jpg';
 	$scope.veggies1 =[];
