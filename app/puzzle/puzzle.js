@@ -32,11 +32,10 @@ angular.module('myApp.puzzle', ['ngRoute'])
 	return{
 		link: function(scope, element){
 			for (var i = 0; i < 9; i++) {
-			var template = "<button ng-click='doSomething()'>{{label}}{{i}}</button>";
+			var template = "<button ng-click='doSomething()'>{{label}}</button>";
 			var linkFn = $compile(template);
 			var content = linkFn(scope);
 			element.append(content);
-
 		}
 	}
 })
