@@ -22,9 +22,21 @@ return qwests;
 
 angular.module('myApp.puzzle', ['ngRoute'])
 .directive("otcDynamic", function(){
+	var tmpl = '<table>';
+	for (var i =0; i < 9; i++)
+	{
+		if (i % 3 == 0){
+			if (i != 0) {
+				tmpl += '</tr>';
+			}
+			tmpl += '<tr>';
+		}
+		tmpl += '<td>' + i + '</td>'
+	}
+	tmpl += '</td></table';
 	return {
 		//template:parametr//"<button ng-click='doSomething()'>{{label}}</div>"
-		template:"<button ng-click='doSomething()'>{{veg1.number}}</div>"
+		template:tmpl//"<button ng-click='doSomething()'>{{veg1.number}}</div>"
 	};
 })
 
