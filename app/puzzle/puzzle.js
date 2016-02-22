@@ -31,9 +31,9 @@ angular.module('myApp.puzzle', ['ngRoute'])
 			}
 			tmpl += '<tr>';
 		}
-		tmpl += '<td>' + i + '</td>'
+		tmpl += '<td>' + '<div' + ' background-image="url(' + $scope.puzzleimg + ')">'+ i +'</div>'+ '</td>';
 	}
-	tmpl += '</td></table';
+	tmpl += '</td></table>';
 	return {
 		//template:parametr//"<button ng-click='doSomething()'>{{label}}</div>"
 		template:tmpl//"<button ng-click='doSomething()'>{{veg1.number}}</div>"
