@@ -21,9 +21,9 @@ return qwests;
 
 
 angular.module('myApp.puzzle', ['ngRoute'])
-.directive("otcDynamic", function(){
+.directive("otcDynamic", function(parametr){
 	return {
-		template:"<button ng-click='doSomething()'>{{label}}</div>"
+		template:parametr//"<button ng-click='doSomething()'>{{label}}</div>"
 	};
 })
 
@@ -59,7 +59,7 @@ angular.module('myApp.puzzle', ['ngRoute'])
 		$scope.cellSize = 400/gridSize;
 		for (var i = 0; i < 9; i++) {
 		//if ($scope.i<9){
-			$scope.veggies1.push({ "number": $compile('<button ng-click="alert(123)">' + $scope.veggies1.length + '</button>') });
+			$scope.veggies1.push({ "number": '<button ng-click="alert(123)">' + $scope.veggies1.length + '</button>' });
 			$scope.i = $scope.i + 1;
 		//}
 		}
