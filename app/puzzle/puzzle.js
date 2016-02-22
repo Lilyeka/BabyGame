@@ -28,17 +28,17 @@ angular.module('myApp.puzzle', ['ngRoute'])
 //	};
 //})
 
-.directive("otcDynamic", function($compile){
-	return{
-		link: function(scope, element){
-			for (var i = 0; i < 9; i++) {
-			var template = "<button ng-click='doSomething()'>{{label}}</button>";
-			var linkFn = $compile(template);
-			var content = linkFn(scope);
-			element.append(content);
-		}
-	}
-})
+//.directive("otcDynamic", function($compile){
+//	return{
+//		link: function(scope, element){
+		//	for (var i = 0; i < 9; i++) {
+		//	var template = "<button ng-click='doSomething()'>{{label}}</button>";
+		//	var linkFn = $compile(template);
+		//	var content = linkFn(scope);
+		//	element.append(content);
+		//}
+	//}
+//})
 .controller('PuzzleCtrl', function($scope, $http, $location,$timeout) {
 	$scope.puzzleimg = 'img/12.jpg';
 	$scope.veggies1 =[];
