@@ -45,11 +45,11 @@ angular.module('myApp.puzzle', ['ngRoute'])
 
 	$scope.label = "Please click";
 	$scope.doSomething = function(){
-		for (var i = 0; i < 9; i++) {
-			$scope.message = "Clicked!" + i;
+		//for (var i = 0; i < 9; i++) {
+		//	$scope.message = "Clicked!" + i;
 
-		}
-		//$scope.message = "Clicked!";
+		//}
+		$scope.message = "Clicked!";
 	};
 
 
