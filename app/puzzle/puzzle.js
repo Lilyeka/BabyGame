@@ -23,16 +23,25 @@ return qwests;
 angular.module('myApp.puzzle', ['ngRoute'])
 .directive("otcDynamic", function(){
 	var tmpl = '<table>';
+	// 9 заменить на gridSize*gridSize!
 	for (var i =0; i < 9; i++)
 	{
+    // 3 заменить на gridSize!
 		if (i % 3 == 0){
 			if (i != 0) {
 				tmpl += '</tr>';
 			}
 			tmpl += '<tr>';
 		}
-		tmpl += '<td>' + '<div style="background-image: url('+ $scope.puzzleimg+ ');background-size:'+$scope.gridSize*100+'%; border-width:3px; border-color:blue; padding:4px">'+ i +'</div>'+ '</td>';
+		tmpl += '<td>' +
+				//background-size зависит от gridSize который пока что равен 0 !!!!!
+			'<div style="background-image: url('+ $scope.puzzleimg+ ');background-size:'+$scope.gridSize*100+'%; border-width:3px; border-color:blue; padding:4px">'+ i +'</div>'+ '</td>';
 	}
+
+	//Разобраться с GridSize - она инициализируется через SetImage(gridSize) который теперь не вызывается
+	//Надо сделать в хтмл форму выбора gridSize 3-4-6
+
+
 	tmpl += '</td></table>';
 	return {
 		//template:parametr//"<button ng-click='doSomething()'>{{label}}</div>"
