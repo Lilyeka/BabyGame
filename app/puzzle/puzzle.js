@@ -60,7 +60,7 @@ angular.module('myApp.puzzle', ['ngRoute'])
 		$scope.cellSize = 400/gridSize;
 		for (var i = 0; i < 9; i++) {
 		//if ($scope.i<9){
-			$scope.veggies1.push($scope.veggies1.length);
+			$scope.veggies1.push({ "number": $scope.veggies1.length });
 			$scope.i = $scope.i + 1;
 		//}
 		}
