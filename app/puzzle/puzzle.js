@@ -39,7 +39,7 @@ angular.module('myApp.puzzle', ['ngRoute'])
 		//}
 	//}
 //})
-.controller('PuzzleCtrl', function($scope, $http, $location,$timeout) {
+.controller('PuzzleCtrl', function($scope, $http, $location,$compile) {
 	$scope.puzzleimg = 'img/12.jpg';
 	$scope.veggies1 =[];
 	$scope.gridSize = 0;
@@ -60,7 +60,7 @@ angular.module('myApp.puzzle', ['ngRoute'])
 		$scope.cellSize = 400/gridSize;
 		for (var i = 0; i < 9; i++) {
 		//if ($scope.i<9){
-			$scope.veggies1.push({ "number": '<button ng-click="alert(123)">' + $scope.veggies1.length + '</button>' });
+			$scope.veggies1.push({ "number": $compile('<button ng-click="alert(123)">' + $scope.veggies1.length + '</button>') });
 			$scope.i = $scope.i + 1;
 		//}
 		}
