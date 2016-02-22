@@ -21,12 +21,11 @@ return qwests;
 
 
 angular.module('myApp.puzzle', ['ngRoute'])
-
-//.directive("otcDynamic", function(){
-//	return {
-//		template:"<button ng-click='doSomething()'>{{label}}</div>"
-//	};
-//})
+.directive("otcDynamic", function(){
+	return {
+		template:"<button ng-click='doSomething()'>{{label}}</div>"
+	};
+})
 
 //.directive("otcDynamic", function($compile){
 //	return{
