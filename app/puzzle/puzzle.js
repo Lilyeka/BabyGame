@@ -31,9 +31,9 @@ angular.module('myApp.puzzle', ['ngRoute'])
 			}
 			tmpl += '<tr>';
 		}
-		tmpl += '<td>' + '<div style=\"position:absolute; left:0px; top:0px;
+		tmpl += '<td>' + '<div style="position:absolute; left:0px; top:0px;
 		font-family:Verdana; font-size:10pt;
-		border-style:groove; border-width:30px; border-color:blue; padding:4px\">'+ i +'</div>'+ '</td>';
+		border-style:groove; border-width:30px; border-color:blue; padding:4px">'+ i +'</div>'+ '</td>';
 	}
 	tmpl += '</td></table>';
 	return {
