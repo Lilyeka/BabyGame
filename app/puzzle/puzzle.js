@@ -32,7 +32,7 @@ angular.module('myApp.puzzle', ['ngRoute'])
 			tmpl += '<tr>';
 		}
 		tmpl += '<td>' + '<div' + ' style="background-image: \'img/12.jpg\'">'+ i +'</div>'+ '</td>';
-	}1111
+	}
 	tmpl += '</td></table>';
 	return {
 		//template:parametr//"<button ng-click='doSomething()'>{{label}}</div>"
