@@ -31,7 +31,7 @@ angular.module('myApp.puzzle', ['ngRoute'])
 			}
 			tmpl += '<tr>';
 		}
-		tmpl += '<td>' + '<div style="background-image: url(img/12.jpg);background-size:300%; border-style:groove; border-width:30px; border-color:blue; padding:4px">'+ i +'</div>'+ '</td>';
+		tmpl += '<td>' + '<div style="background-image: url('+ "img/12.jpg"+ ');background-size:300%; border-style:groove; border-width:30px; border-color:blue; padding:4px">'+ i +'</div>'+ '</td>';
 	}
 	tmpl += '</td></table>';
 	return {
