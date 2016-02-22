@@ -23,7 +23,8 @@ return qwests;
 angular.module('myApp.puzzle', ['ngRoute'])
 .directive("otcDynamic", function(parametr){
 	return {
-		template:parametr//"<button ng-click='doSomething()'>{{label}}</div>"
+		//template:parametr//"<button ng-click='doSomething()'>{{label}}</div>"
+		template:"<button ng-click='doSomething()'>{{label}}</div>"
 	};
 })
 
