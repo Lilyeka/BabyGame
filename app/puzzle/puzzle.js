@@ -36,7 +36,7 @@ angular.module('myApp.puzzle', ['ngRoute'])
 		tmpl += '<td>' +
 				//background-size зависит от gridSize который пока что равен 0 !!!!!
 		//	'<div style="border-width:3px; border-color:blue; padding:4px">'+ i +'</div>'+ '</td>';
-			'<div style="background-image: url('+ $scope.puzzleimg+ '); border-width:3px; border-color:blue; padding:4px">'+ i +'</div>'+ '</td>';
+			'<div style="background-image: url('+ $scope.puzzleimg+ '); background-size:300%; border-width:3px; border-color:blue; padding:4px">'+ i +'</div>'+ '</td>';
 	}
 
 	//Разобраться с GridSize - она инициализируется через SetImage(gridSize) который теперь не вызывается
