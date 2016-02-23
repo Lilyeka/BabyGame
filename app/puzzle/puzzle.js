@@ -24,10 +24,10 @@ angular.module('myApp.puzzle', ['ngRoute'])
 .directive("otcDynamic", function(){
 	var tmpl = '<table>';
 	// 9 заменить на gridSize*gridSize!
-	for (var i =0; i < $scope.gridSize*$scope.gridSize; i++)
+	for (var i =0; i < 25; i++)
 	{
     // 3 заменить на gridSize!
-		if (i % $scope.gridSize == 0){
+		if (i % 5 == 0){
 			if (i != 0) {
 				tmpl += '</tr>';
 			}
@@ -35,7 +35,7 @@ angular.module('myApp.puzzle', ['ngRoute'])
 		}
 		tmpl += '<td>' +
 				//background-size зависит от gridSize который пока что равен 0 !!!!!
-			'<div style="background-image: url('+ $scope.puzzleimg+ ');background-size:'+$scope.gridSize*100+'%; border-width:3px; border-color:blue; padding:4px">'+ i +'</div>'+ '</td>';
+			'<div style="background-image: url('+ $scope.puzzleimg+ ');background-size:500%; border-width:3px; border-color:blue; padding:4px">'+ i +'</div>'+ '</td>';
 	}
 
 	//Разобраться с GridSize - она инициализируется через SetImage(gridSize) который теперь не вызывается
