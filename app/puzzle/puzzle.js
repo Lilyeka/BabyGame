@@ -63,7 +63,7 @@ angular.module('myApp.puzzle', ['ngRoute'])
 .controller('PuzzleCtrl', function($scope, $http, $location,$compile) {
 	$scope.puzzleimg = 'img/12.jpg';
 	$scope.veggies1 =[];
-	//$scope.gridSize = 0;
+	$scope.gridSize = 3;
 
 	$scope.label = "Please click";
 	$scope.doSomething = function(){
