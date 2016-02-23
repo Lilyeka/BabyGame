@@ -24,10 +24,10 @@ angular.module('myApp.puzzle', ['ngRoute'])
 .directive("otcDynamic", function(){
 	var tmpl = '<table>';
 	// 9 заменить на gridSize*gridSize!
-	for (var i =0; i < 9; i++)
+	for (var i =0; i < $scope.gridSize*$scope.gridSize; i++)
 	{
     // 3 заменить на gridSize!
-		if (i % 3 == 0){
+		if (i % $scope.gridSize == 0){
 			if (i != 0) {
 				tmpl += '</tr>';
 			}
@@ -63,7 +63,7 @@ angular.module('myApp.puzzle', ['ngRoute'])
 .controller('PuzzleCtrl', function($scope, $http, $location,$compile) {
 	$scope.puzzleimg = 'img/12.jpg';
 	$scope.veggies1 =[];
-	$scope.gridSize = 0;
+	//$scope.gridSize = 0;
 
 	$scope.label = "Please click";
 	$scope.doSomething = function(){
