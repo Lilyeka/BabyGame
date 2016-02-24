@@ -42,10 +42,14 @@ angular.module('myApp.puzzle', ['ngRoute'])
 	}
 
 	tmpl += '</td></table>';
+	tmpl += "<input ng-model='hello'>{{hello}}";
 	return {
 		//template:parametr//"<button ng-click='doSomething()'>{{label}}</div>"
 		template:tmpl,
-		scope:true//"<button ng-click='doSomething()'>{{veg1.number}}</div>"
+		//scope:true//"<button ng-click='doSomething()'>{{veg1.number}}</div>"
+		scope:{
+			hello:'=someAttr'
+		}
 	};
 })
 //.directive("otcDynamic", function($compile){
@@ -60,6 +64,7 @@ angular.module('myApp.puzzle', ['ngRoute'])
 	//}
 //})
 .controller('PuzzleCtrl', function($scope, $http, $location,$compile) {
+	$scope.hello="Hello Habr!";
 	$scope.puzzleimg = 'img/12.jpg';
 	$scope.veggies1 =[];
 	$scope.gridSize = 3;
