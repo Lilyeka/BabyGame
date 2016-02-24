@@ -21,10 +21,10 @@ return qwests;
 
 
 angular.module('myApp.puzzle', ['ngRoute'])
-.directive("otcDynamic", function($scope){
+.directive("otcDynamic", function(){
 	var tmpl = '<table>';
 	//var img = 'img/12.jpg';
-	var img = $scope.puzzleimg;
+	var img = puzzleimg;
 	// 9 заменить на gridSize*gridSize!
 	for (var i =0; i < 25; i++) {
 		// 3 заменить на gridSize!
