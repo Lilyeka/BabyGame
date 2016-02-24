@@ -28,16 +28,16 @@ angular.module('myApp.puzzle', ['ngRoute'])
 	//var gridSize2 = 9;
 	//var gridSize1 = 3;
 	// 9 заменить на gridSize*gridSize!
-	for (var i =0; i < gridSize1*gridSize1; i++) {
+	for (var i =0; i < scope.gridSize*scope.gridSize; i++) {
 		// 3 заменить на gridSize!
-		if (i % gridSize1 == 0) {
+		if (i % scope.gridSize == 0) {
 			if (i != 0) {
 				tmpl += '</tr>';
 			}
 			tmpl += '<tr>';
 		}
 		tmpl += '<td>' +
-				'<li style="background-image: url({{puzzleimg1}}); width:{{cellSize1}}px; height:{{cellSize1}}px;background-size:{{bgSize1}}%">'+ i +'</li>'+ '</td>';
+				'<li style="background-image: url({{puzzleimg}}); width:{{cellSize}}px; height:{{cellSize}}px;background-size:{{bgSize}}%">'+ i +'</li>'+ '</td>';
 			//'<div style="background-image: url(' + $scope.puzzleimg + '); background-size:300%; border-width:3px; border-color:blue; padding:4px">' + i + "</div></td>";
 	}
 
@@ -48,10 +48,10 @@ angular.module('myApp.puzzle', ['ngRoute'])
 		template:tmpl,
 		//scope:true//"<button ng-click='doSomething()'>{{veg1.number}}</div>"
 		scope:{
-			gridSize1:"=",
-			puzzleImg1:"=",
-			cellSize1:"=",
-			bgSize1:"="
+			gridSize:"=",
+			puzzleImg:"=",
+			cellSize:"=",
+			bgSize:"="
 		}
 	};
 })
