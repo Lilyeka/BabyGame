@@ -28,9 +28,9 @@ angular.module('myApp.puzzle', ['ngRoute'])
 	//var gridSize2 = 9;
 	//var gridSize1 = 3;
 	// 9 заменить на gridSize*gridSize!
-	for (var i =0; i < scope.gridSize*scope.gridSize; i++) {
+	for (var i =0; i < 9; i++) {
 		// 3 заменить на gridSize!
-		if (i % scope.gridSize == 0) {
+		if (i % 3 == 0) {
 			if (i != 0) {
 				tmpl += '</tr>';
 			}
@@ -41,18 +41,18 @@ angular.module('myApp.puzzle', ['ngRoute'])
 			//'<div style="background-image: url(' + $scope.puzzleimg + '); background-size:300%; border-width:3px; border-color:blue; padding:4px">' + i + "</div></td>";
 	}
 
-	tmpl += '{{gridSize}}{{puzzleimg}}{{cellSize}}{{bgSize}}</td></table>';
+	tmpl += '</td></table>';
 
 	return {
 		//template:parametr//"<button ng-click='doSomething()'>{{label}}</div>"
 		template:tmpl,
-		//scope:true//"<button ng-click='doSomething()'>{{veg1.number}}</div>"
-		scope:{
-			gridSize:"=",
-			puzzleImg:"=",
-			cellSize:"=",
-			bgSize:"="
-		}
+		scope:true//"<button ng-click='doSomething()'>{{veg1.number}}</div>"
+		//scope:{
+		//	gridSize:"=",
+		//	puzzleImg:"=",
+		//	cellSize:"=",
+		//	bgSize:"="
+		//}
 	};
 })
 //.directive("otcDynamic", function($compile){
