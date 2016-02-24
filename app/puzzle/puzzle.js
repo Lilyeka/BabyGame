@@ -24,7 +24,7 @@ angular.module('myApp.puzzle', ['ngRoute'])
 .directive("otcDynamic", function(){
 	var tmpl = '<table>';
 	//var img = 'img/12.jpg';
-	var img = puzzleimg;
+	//var img = puzzleimg;
 	// 9 заменить на gridSize*gridSize!
 	for (var i =0; i < 25; i++) {
 		// 3 заменить на gridSize!
@@ -35,7 +35,7 @@ angular.module('myApp.puzzle', ['ngRoute'])
 			tmpl += '<tr>';
 		}
 		tmpl += '<td>' +
-				'<li background-image: url('+img+'); width:100px; height:100px">'+ i +'</li>'+ '</td>';
+				'<li background-image: url({{'+puzzleimg+'}}); width:100px; height:100px">'+ i +'</li>'+ '</td>';
 			//'<div style="background-image: url(' + $scope.puzzleimg + '); background-size:300%; border-width:3px; border-color:blue; padding:4px">' + i + "</div></td>";
 	}
 
