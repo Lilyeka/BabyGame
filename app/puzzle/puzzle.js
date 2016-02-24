@@ -25,8 +25,8 @@ angular.module('myApp.puzzle', ['ngRoute'])
 	var tmpl = '<table>';
 	//var img = 'img/12.jpg';
 	//var img = puzzleimg;
-	var gridSize2 = $scope.gridSize*$scope.gridSize;
-	var gridSize1 = $scope.gridSize;
+	var gridSize2 = gridSize*gridSize;
+	var gridSize1 = gridSize;
 	// 9 заменить на gridSize*gridSize!
 	for (var i =0; i < gridSize2; i++) {
 		// 3 заменить на gridSize!
