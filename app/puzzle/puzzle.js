@@ -37,18 +37,20 @@ angular.module('myApp.puzzle', ['ngRoute'])
 			tmpl += '<tr>';
 		}
 		tmpl += '<td>' +
-				'<li style="background-image: url({{puzzleimg}}); width:{{cellSize}}px; height:{{cellSize}}px">'+ i +'</li>'+ '</td>';
+				'<li style="background-image: url({{puzzleimg1}}); width:{{cellSize1}}px; height:{{cellSize1}}px;background-size:{{bgSize1}}%">'+ i +'</li>'+ '</td>';
 			//'<div style="background-image: url(' + $scope.puzzleimg + '); background-size:300%; border-width:3px; border-color:blue; padding:4px">' + i + "</div></td>";
 	}
 
 	tmpl += '</td></table>';
-	tmpl += "<input ng-model='hello'>{{hello}}";
+
 	return {
 		//template:parametr//"<button ng-click='doSomething()'>{{label}}</div>"
 		template:tmpl,
 		//scope:true//"<button ng-click='doSomething()'>{{veg1.number}}</div>"
 		scope:{
-			hello:'=someAttr'
+			puzzleImg1:"=",
+			cellSize1:"=",
+			bgSize1:"="
 		}
 	};
 })
@@ -64,11 +66,11 @@ angular.module('myApp.puzzle', ['ngRoute'])
 	//}
 //})
 .controller('PuzzleCtrl', function($scope, $http, $location,$compile) {
-	$scope.hello="Hello Habr!";
 	$scope.puzzleimg = 'img/12.jpg';
 	$scope.veggies1 =[];
 	$scope.gridSize = 3;
 	$scope.cellSize = 400/$scope.gridSize;
+	$scope.bgSize = $scope.gridSize * 100;
 
 	$scope.label = "Please click";
 	$scope.doSomething = function(){
