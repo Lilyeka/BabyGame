@@ -25,12 +25,12 @@ angular.module('myApp.puzzle', ['ngRoute'])
 	var tmpl = '<table>';
 	//var img = 'img/12.jpg';
 	//var img = puzzleimg;
-	var gridSize2 = 9;
-	var gridSize1 = 3;
+	//var gridSize2 = 9;
+	//var gridSize1 = 3;
 	// 9 заменить на gridSize*gridSize!
-	for (var i =0; i < gridSize2; i++) {
+	for (var i =0; i < $scope.gridSize1*$scope.gridSize1; i++) {
 		// 3 заменить на gridSize!
-		if (i % gridSize1 == 0) {
+		if (i % $scope.gridSize1 == 0) {
 			if (i != 0) {
 				tmpl += '</tr>';
 			}
@@ -48,6 +48,7 @@ angular.module('myApp.puzzle', ['ngRoute'])
 		template:tmpl,
 		//scope:true//"<button ng-click='doSomething()'>{{veg1.number}}</div>"
 		scope:{
+			gridSize1:"=",
 			puzzleImg1:"=",
 			cellSize1:"=",
 			bgSize1:"="
