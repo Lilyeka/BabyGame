@@ -41,7 +41,7 @@ angular.module('myApp.puzzle', ['ngRoute'])
 			//'<div style="background-image: url(' + $scope.puzzleimg + '); background-size:300%; border-width:3px; border-color:blue; padding:4px">' + i + "</div></td>";
 	}
 
-	tmpl += '</td></table>';
+	tmpl += '{{gridSize}}{{puzzleimg}}{{cellSize}}{{bgSize}}</td></table>';
 
 	return {
 		//template:parametr//"<button ng-click='doSomething()'>{{label}}</div>"
