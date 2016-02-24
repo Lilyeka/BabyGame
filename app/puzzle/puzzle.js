@@ -24,19 +24,18 @@ angular.module('myApp.puzzle', ['ngRoute'])
 .directive("otcDynamic", function(){
 	var tmpl = '<table>';
 	// 9 заменить на gridSize*gridSize!
-	for (var i =0; i < 25; i++)
-	{
-    // 3 заменить на gridSize!
-		if (i % 5 == 0){
+	for (var i =0; i < 25; i++) {
+		// 3 заменить на gridSize!
+		if (i % 5 == 0) {
 			if (i != 0) {
 				tmpl += '</tr>';
 			}
 			tmpl += '<tr>';
 		}
 		tmpl += '<td>' +
-			'<div style="border-width:3px; border-color:blue; padding:4px">'+ i +'</div>'+ '</td>';
-			//'<div style="background-image: url('+ $scope.puzzleimg+ '); background-size:300%; border-width:3px; border-color:blue; padding:4px">'+ i +'</div>'+ '</td>';
-
+				'<div style="border-width:3px; border-color:blue; padding:4px">'+ i +'</div>'+ '</td>';
+			//'<div style="background-image: url(' + $scope.puzzleimg + '); background-size:300%; border-width:3px; border-color:blue; padding:4px">' + i + "</div></td>";
+	}
 
 	tmpl += '</td></table>';
 	return {
@@ -44,7 +43,6 @@ angular.module('myApp.puzzle', ['ngRoute'])
 		template:tmpl//"<button ng-click='doSomething()'>{{veg1.number}}</div>"
 	};
 })
-
 //.directive("otcDynamic", function($compile){
 //	return{
 //		link: function(scope, element){
