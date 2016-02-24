@@ -37,7 +37,7 @@ angular.module('myApp.puzzle', ['ngRoute'])
 			tmpl += '<tr>';
 		}
 		tmpl += '<td>' +
-				'<li style="background-image: url({{puzzleimg}}); width:400/{{gridSize}}px; height:400/{{gridSize}}px">'+ i +'</li>'+ '</td>';
+				'<li style="background-image: url({{puzzleimg}}); width:{{cellSize}}; height:{{cellSize}}">'+ i +'</li>'+ '</td>';
 			//'<div style="background-image: url(' + $scope.puzzleimg + '); background-size:300%; border-width:3px; border-color:blue; padding:4px">' + i + "</div></td>";
 	}
 
@@ -63,6 +63,7 @@ angular.module('myApp.puzzle', ['ngRoute'])
 	$scope.puzzleimg = 'img/12.jpg';
 	$scope.veggies1 =[];
 	$scope.gridSize = 3;
+	$scope.cellSize = 400/$scope.gridSize;
 
 	$scope.label = "Please click";
 	$scope.doSomething = function(){
@@ -77,7 +78,7 @@ angular.module('myApp.puzzle', ['ngRoute'])
 	$scope.setImage = function(gridSize) {
 		window.alert("Hellow!!!");
 		$scope.gridSize = gridSize;
-		$scope.cellSize = 400/gridSize;
+
 		for (var i = 0; i < 9; i++) {
 		//if ($scope.i<9){
 		//	$scope.veggies1.push({ "number": '<button ng-click="alert(123)">' + $scope.veggies1.length + '</button>' });
