@@ -37,7 +37,7 @@ angular.module('myApp.puzzle', ['ngRoute'])
 			tmpl += '<tr>';
 		}
 		tmpl += '<td>' +
-				'<li style="background-image: url({{puzzleimg}}); width:{{cellSize}}px; height:{{cellSize}}px;background-size:{{bgSize}}%">'+ i +'</li>'+ '</td>';
+				'<li style="background-image: url({{puzzleimg}}); width:{{cellSize}}px; height:{{cellSize}}px;background-size:{{bgSize}}%; background-position: xpos('+i+',{{gridSize}})  ypos('+i+',{{gridSize}})">'+ i +'</li>'+ '</td>';
 			//'<div style="background-image: url(' + $scope.puzzleimg + '); background-size:300%; border-width:3px; border-color:blue; padding:4px">' + i + "</div></td>";
 	}
 
@@ -81,7 +81,22 @@ angular.module('myApp.puzzle', ['ngRoute'])
 		//}
 		$scope.message = "Clicked!";
 	};
+	$scope.xpos = function(numb,gridSize){
+		var percentage;
+		var xposition;
+		percentage = 100 / (gridSize - 1);
+		xposition = (percentage * (numb % gridSize));
 
+		return xposition;
+	}
+
+	$scope.ypos = function(numb,gridSize){
+		var percentage;
+		var yposition;
+		percentage = 100 / (gridSize - 1);
+		yposition = (percentage * Math.floor(numb/ gridSize));
+		return yposition;
+	}
 
 	$scope.setImage = function(gridSize) {
 		window.alert("Hellow!!!");
