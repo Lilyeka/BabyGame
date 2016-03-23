@@ -22,15 +22,15 @@ return qwests;
 
 angular.module('myApp.puzzle', ['ngRoute'])
 .directive("otcDynamic", function(){
-	var tmpl = '<table>';
-	//var img = 'img/12.jpg';
-	//var img = puzzleimg;
-	//var gridSize2 = 9;
-	//var gridSize1 = 3;
+	return function($scope, element, attrs) {
+        /*Задаем функцию, которая будет вызываться при изменении переменной gridSise, ее имя находится в attrs.otcDynamic*/
+        $scope.$watch(attrs.otcDynamic,function(value){
+        var tmpl = '<table>';
+	
 	// 9 заменить на gridSize*gridSize!
-	for (var i =0; i < 9; i++) {
+	for (var i =0; i < value*value; i++) {
 		// 3 заменить на gridSize!
-		if (i % 3 == 0) {
+		if (i % value == 0) {
 			if (i != 0) {
 				tmpl += '</tr>';
 			}
@@ -38,34 +38,45 @@ angular.module('myApp.puzzle', ['ngRoute'])
 		}
 		tmpl += '<td>' +
 		'<li style="background-image: url({{puzzleimg}}); width:{{cellSize}}px; height:{{cellSize}}px;background-size:{{bgSize}}%; background-position:{{xpos('+i+',gridSize)}}%  {{ypos('+i+',gridSize)}}%">'+ i +'</li>'+ '</td>';
-			//'<div style="background-image: url(' + $scope.puzzleimg + '); background-size:300%; border-width:3px; border-color:blue; padding:4px">' + i + "</div></td>";
+		
 	}
 
-	tmpl += '</td></table>';
-
-	return {
-		//template:parametr//"<button ng-click='doSomething()'>{{label}}</div>"
-		template:tmpl,
-		scope:true//"<button ng-click='doSomething()'>{{veg1.number}}</div>"
-		//scope:{
-		//	gridSize:"=",
-		//	puzzleImg:"=",
-		//	cellSize:"=",
-		//	bgSize:"="
-		//}
-	};
-})
-//.directive("otcDynamic", function($compile){
-//	return{
-//		link: function(scope, element){111
-		//	for (var i = 0; i < 9; i++) {
-		//	var template = "<button ng-click='doSomething()'>{{label}}</button>";
-		//	var linkFn = $compile(template);
-		//	var content = linkFn(scope);
-		//	element.append(content);
-		//}
+	tmpl += '</td></table>';	
+            element.text(tmpl);
+        });
+	//var tmpl = '<table>';
+	
+	//// 9 заменить на gridSize*gridSize!
+	//for (var i =0; i < 9; i++) {
+	//	// 3 заменить на gridSize!
+	//	if (i % 3 == 0) {
+	//		if (i != 0) {
+	//			tmpl += '</tr>';
+	//		}
+	//		tmpl += '<tr>';
+	//	}
+	//	tmpl += '<td>' +
+	//	'<li style="background-image: url({{puzzleimg}}); width:{{cellSize}}px; height:{{cellSize}}px;background-size:{{bgSize}}%; background-position:{{xpos('+i+',gridSize)}}%  {{ypos('+i+',gridSize)}}%">'+ i +'</li>'+ '</td>';
+		
 	//}
-//})
+
+	//tmpl += '</td></table>';
+
+	//return {
+	//	//template:parametr//"<button ng-click='doSomething()'>{{label}}</div>"
+	//	template:tmpl,
+	//	scope:true//"<button ng-click='doSomething()'>{{veg1.number}}</div>"
+	//	//scope:{
+	//	//	gridSize:"=",
+	//	//	puzzleImg:"=",
+	//	//	cellSize:"=",
+	//	//	bgSize:"="
+	//	//}
+	//};
+})
+
+
+
 .controller('PuzzleCtrl', function($scope, $http, $location,$compile) {
 	$scope.puzzleimg = 'img/12.jpg';
 	$scope.veggies1 =[];
