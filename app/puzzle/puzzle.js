@@ -30,7 +30,7 @@ angular.module('myApp.puzzle', ['ngRoute'])
 	// 9 заменить на gridSize*gridSize!
 	for (var i =0; i < 9; i++) {
 		// 3 заменить на gridSize!
-		if (i % 3 == 0) {
+		if (i % $scope.gridSize == 0) {
 			if (i != 0) {
 				tmpl += '</tr>';
 			}
@@ -45,8 +45,8 @@ angular.module('myApp.puzzle', ['ngRoute'])
 
 	return {
 		//template:parametr//"<button ng-click='doSomething()'>{{label}}</div>"
-		template:tmpl,
-		scope:true//"<button ng-click='doSomething()'>{{veg1.number}}</div>"
+		template:tmpl
+		//scope:true//"<button ng-click='doSomething()'>{{veg1.number}}</div>"
 		//scope:{
 		//	gridSize:"=",
 		//	puzzleImg:"=",
