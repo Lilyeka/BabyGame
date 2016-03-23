@@ -22,13 +22,11 @@ return qwests;
 
 angular.module('myApp.puzzle', ['ngRoute'])
 .directive("otcDynamic", function(){
-	return function($scope, element, attrs) {
-        /*Задаем функцию, которая будет вызываться при изменении переменной gridSise, ее имя находится в attrs.otcDynamic*/
-        $scope.$watch(attrs.otcDynamic,function(value){
-        var tmpl = '<table>';
+	
+	var tmpl = '<table>';
 	
 	// 9 заменить на gridSize*gridSize!
-	for (var i =0; i <9; i++) {
+	for (var i =0; i < 9; i++) {
 		// 3 заменить на gridSize!
 		if (i % 3 == 0) {
 			if (i != 0) {
@@ -41,38 +39,19 @@ angular.module('myApp.puzzle', ['ngRoute'])
 		
 	}
 
-	tmpl += '</td></table>';	
-            element.text(tmpl);
-        });
-	//var tmpl = '<table>';
-	
-	//// 9 заменить на gridSize*gridSize!
-	//for (var i =0; i < 9; i++) {
-	//	// 3 заменить на gridSize!
-	//	if (i % 3 == 0) {
-	//		if (i != 0) {
-	//			tmpl += '</tr>';
-	//		}
-	//		tmpl += '<tr>';
-	//	}
-	//	tmpl += '<td>' +
-	//	'<li style="background-image: url({{puzzleimg}}); width:{{cellSize}}px; height:{{cellSize}}px;background-size:{{bgSize}}%; background-position:{{xpos('+i+',gridSize)}}%  {{ypos('+i+',gridSize)}}%">'+ i +'</li>'+ '</td>';
-		
-	//}
+	tmpl += '</td></table>';
 
-	//tmpl += '</td></table>';
-
-	//return {
-	//	//template:parametr//"<button ng-click='doSomething()'>{{label}}</div>"
-	//	template:tmpl,
-	//	scope:true//"<button ng-click='doSomething()'>{{veg1.number}}</div>"
-	//	//scope:{
-	//	//	gridSize:"=",
-	//	//	puzzleImg:"=",
-	//	//	cellSize:"=",
-	//	//	bgSize:"="
-	//	//}
-	//};
+	return {
+		//template:parametr//"<button ng-click='doSomething()'>{{label}}</div>"
+		template:tmpl,
+		scope:true//"<button ng-click='doSomething()'>{{veg1.number}}</div>"
+		//scope:{
+		//	gridSize:"=",
+		//	puzzleImg:"=",
+		//	cellSize:"=",
+		//	bgSize:"="
+		//}
+	};
 })
 
 
