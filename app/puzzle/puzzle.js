@@ -37,7 +37,7 @@ angular.module('myApp.puzzle', ['ngRoute'])
 			tmpl += '<tr>';
 		}
 		tmpl += '<td>' +
-		'<li style="background-image: url({{puzzleimg}}); width:{{cellSize}}px; height:{{cellSize}}px;background-size:{{bgSize}}%; background-position:{{xpos('+i+',3)}}%  {{ypos('+i+',3)}}%">'+ i +'</li>'+ '</td>';
+		'<li style="background-image: url({{puzzleimg}}); width:{{cellSize}}px; height:{{cellSize}}px;background-size:{{bgSize}}%; background-position:{{xpos('+i+','+$scope.gridSize+')}}%  {{ypos('+i+','+$scope.gridSize+')}}%">'+ i +'</li>'+ '</td>';
 			//'<div style="background-image: url(' + $scope.puzzleimg + '); background-size:300%; border-width:3px; border-color:blue; padding:4px">' + i + "</div></td>";
 	}
 
