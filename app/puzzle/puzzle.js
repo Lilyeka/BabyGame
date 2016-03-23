@@ -30,7 +30,7 @@ angular.module('myApp.puzzle', ['ngRoute'])
 	// 9 заменить на gridSize*gridSize!
 	for (var i =0; i < 9; i++) {
 		// 3 заменить на gridSize!
-		if (i % gs == 0) {
+		if (i % 3 == 0) {
 			if (i != 0) {
 				tmpl += '</tr>';
 			}
