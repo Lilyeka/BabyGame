@@ -21,7 +21,7 @@ return qwests;
 
 
 angular.module('myApp.puzzle', ['ngRoute'])
-.directive("otcDynamic", function(gs){
+.directive("otcDynamic", function(){
 	var tmpl = '<table>';
 	//var img = 'img/12.jpg';
 	//var img = puzzleimg;
