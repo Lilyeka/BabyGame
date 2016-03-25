@@ -63,14 +63,11 @@ angular.module('myApp.puzzle', ['ngRoute'])
 	$scope.gridSize = 3;
 	$scope.cellSize = 400/$scope.gridSize;
 	$scope.bgSize = $scope.gridSize * 100;
-
+1
 	$scope.label = "Please click";
 	$scope.doSomething = function(){
-		//for (var i = 0; i < 9; i++) {
-		//	$scope.message = "Clicked!" + i;
-
-		//}
-		$scope.message = "Clicked!";
+		var gs= $scope.gridSize*$scope.gridSize;
+		return gs;
 	};
 	$scope.xpos = function(numb,gridSize){
 		var percentage;
