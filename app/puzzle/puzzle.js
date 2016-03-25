@@ -22,7 +22,8 @@ return qwests;
 
 angular.module('myApp.puzzle', ['ngRoute'])
 .directive("otcDynamic", function(){
-	
+	var mass = [0,1,2,3,4,5,6,7,8];
+	mass = randomize(mass);
 	var tmpl = '<table>';
 	
 	// 9 заменить на gridSize*gridSize!
@@ -35,8 +36,8 @@ angular.module('myApp.puzzle', ['ngRoute'])
 			tmpl += '<tr>';
 		}
 		tmpl += '<td>' +
-		'<li style="background-image: url({{puzzleimg}}); width:{{cellSize}}px; height:{{cellSize}}px;background-size:{{bgSize}}%; background-position:{{xpos('+i+',gridSize)}}%  {{ypos('+i+',gridSize)}}%">'+ i +'</li>'+ '</td>';
-		
+		//'<li style="background-image: url({{puzzleimg}}); width:{{cellSize}}px; height:{{cellSize}}px;background-size:{{bgSize}}%; background-position:{{xpos('+i+',gridSize)}}%  {{ypos('+i+',gridSize)}}%">'+ i +'</li>'+ '</td>';
+		'<li style="background-image: url({{puzzleimg}}); width:{{cellSize}}px; height:{{cellSize}}px;background-size:{{bgSize}}%; background-position:{{xpos('+mass[i]+',gridSize)}}%  {{ypos('+mass[i]+',gridSize)}}%">'+ i +'</li>'+ '</td>';
 	}
 
 	tmpl += '</td></table>';
