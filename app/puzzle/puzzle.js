@@ -1,4 +1,9 @@
 'use strict';
+doSomething = function(){ 
+ 		var gs= $scope.gridSize*$scope.gridSize; 
+ 		return gs; 
+ 	}; 
+
 //вернет целое случайное число в пределах мин и макс
 function getRandomInt(min, max) 
 { return Math.floor(Math.random() * (max - min + 1)) + min; 
@@ -65,10 +70,7 @@ angular.module('myApp.puzzle', ['ngRoute'])
 	$scope.bgSize = $scope.gridSize * 100;
 1
 	$scope.label = "Please click";
-	$scope.doSomething = function(){
-		var gs= $scope.gridSize*$scope.gridSize;
-		return gs;
-	};
+	
 	$scope.xpos = function(numb,gridSize){
 		var percentage;
 		var xposition;
