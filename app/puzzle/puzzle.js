@@ -1,8 +1,4 @@
 'use strict';
-doSomething = function(){ 
- 		var gs= $scope.gridSize*$scope.gridSize; 
- 		return gs; 
- 	}; 
 
 //вернет целое случайное число в пределах мин и макс
 function getRandomInt(min, max) 
@@ -30,9 +26,8 @@ angular.module('myApp.puzzle', ['ngRoute'])
 	var mass = [0,1,2,3,4,5,6,7,8];
 	mass = randomize(mass);
 	var tmpl = '<table>';
-	var gs2 = doSomething(); 
 	// 9 заменить на gridSize*gridSize!
-	for (var i =0; i < gs2; i++) {
+	for (var i =0; i < 9; i++) {
 		// 3 заменить на gridSize!
 		if (i % 3 == 0) {
 			if (i != 0) {
