@@ -7,7 +7,8 @@ angular.module('myApp', [
   'myApp.view1',
   'myApp.view2',
   'myApp.puzzle',
-  'myApp.version'
+  'myApp.version',
+  'dndLists'
 ]).
 config(['$routeProvider', function($routeProvider) {
   
