@@ -1,4 +1,5 @@
 'use strict';
+
 //вернет целое случайное число в пределах мин и макс
 function getRandomInt(min, max) 
 { return Math.floor(Math.random() * (max - min + 1)) + min; 
@@ -22,11 +23,9 @@ return qwests;
 
 angular.module('myApp.puzzle', ['ngRoute'])
 .directive("otcDynamic", function(){
+	var mass = [0,1,2,3,4,5,6,7,8];
+	mass = randomize(mass);
 	var tmpl = '<table>';
-	//var img = 'img/12.jpg';
-	//var img = puzzleimg;
-	//var gridSize2 = 9;
-	//var gridSize1 = 3;
 	// 9 заменить на gridSize*gridSize!
 	for (var i =0; i < 9; i++) {
 		// 3 заменить на gridSize!
@@ -36,8 +35,9 @@ angular.module('myApp.puzzle', ['ngRoute'])
 			}
 			tmpl += '<tr>';
 		}
-		tmpl += '<td>' + '<li style="background-image: url({{puzzleimg}}); width:{{cellSize}}px; height:{{cellSize}}px;background-size:{{bgSize}}%; background-position: xpos('+i+',{{gridSize}})  ypos('+i+',{{gridSize}})">'+ i +'</li>'+ '</td>';
-			//'<div style="background-image: url(' + $scope.puzzleimg + '); background-size:300%; border-width:3px; border-color:blue; padding:4px">' + i + "</div></td>";
+		tmpl += '<td>' +
+		//'<li style="background-image: url({{puzzleimg}}); width:{{cellSize}}px; height:{{cellSize}}px;background-size:{{bgSize}}%; background-position:{{xpos('+i+',gridSize)}}%  {{ypos('+i+',gridSize)}}%">'+ i +'</li>'+ '</td>';
+		'<li style="background-image: url({{puzzleimg}}); width:{{cellSize}}px; height:{{cellSize}}px;background-size:{{bgSize}}%; background-position:{{xpos('+mass[i]+',gridSize)}}%  {{ypos('+mass[i]+',gridSize)}}%">'+ i +'</li>'+ '</td>';
 	}
 
 	tmpl += '</td></table>';
@@ -54,32 +54,35 @@ angular.module('myApp.puzzle', ['ngRoute'])
 		//}
 	};
 })
-//.directive("otcDynamic", function($compile){
-//	return{
-//		link: function(scope, element){111
-		//	for (var i = 0; i < 9; i++) {
-		//	var template = "<button ng-click='doSomething()'>{{label}}</button>";
-		//	var linkFn = $compile(template);
-		//	var content = linkFn(scope);
-		//	element.append(content);
-		//}
-	//}
-//})
+
+
+
 .controller('PuzzleCtrl', function($scope, $http, $location,$compile) {
+	$scope.models = {
+        selected: null,
+        lists: {"A": [], "B": []}
+    };
+
+    // Generate initial model
+    for (var i = 1; i <= 3; ++i) {
+        $scope.models.lists.A.push({label: "Item A" + i});
+        $scope.models.lists.B.push({label: "Item B" + i});
+    }
+
+    // Model to JSON for demo purpose
+    $scope.$watch('models', function(model) {
+        $scope.modelAsJson = angular.toJson(model, true);
+    }, true);
+    
+    /*---------------------------------------------*/
 	$scope.puzzleimg = 'img/12.jpg';
 	$scope.veggies1 =[];
 	$scope.gridSize = 3;
 	$scope.cellSize = 400/$scope.gridSize;
 	$scope.bgSize = $scope.gridSize * 100;
-
+1
 	$scope.label = "Please click";
-	$scope.doSomething = function(){
-		//for (var i = 0; i < 9; i++) {
-		//	$scope.message = "Clicked!" + i;
-
-		//}
-		$scope.message = "Clicked!";
-	};
+	
 	$scope.xpos = function(numb,gridSize){
 		var percentage;
 		var xposition;
